@@ -9,18 +9,21 @@ public class Movement : MonoBehaviour
     [SerializeField] float jumpForce = 1f;
     [SerializeField] Transform forwardReference;
     [SerializeField] Rigidbody rigidBody;
+    [SerializeField] FootstepSound FootstepSound;
 
     bool jumping = false;
     bool cancelada = false;
 
-
     Vector2 input;
-    
 
+   
     
     // Start is called before the first frame update
     void Start()
     {
+
+        FootstepSound = GameObject.Find("Camera").GetComponent<FootstepSound>();
+
         input = Vector2.zero;
     }
 
@@ -38,13 +41,17 @@ public class Movement : MonoBehaviour
 
         velocity.y = rigidBody.velocity.y;
 
-        if(jumping)
+        
+
+        if (jumping)
         {
             rigidBody.AddForce(new Vector3(0,jumpForce,0), ForceMode.Impulse);
             jumping = false;
         }
 
         rigidBody.velocity = velocity;
+
+        FootstepSound.PlayFootstepSound(rigidBody.velocity);
     }
 
     public void Jump(InputAction.CallbackContext context)
