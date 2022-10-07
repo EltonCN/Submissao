@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -2082,7 +2082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da0c5ba7853fdf04c9053421b1019f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footstepFrequency: 0.75
+  footstepFrequency: 0.65
   LocomotionSource: {fileID: 1507488317}
   FootstepClips:
   - {fileID: 8300000, guid: 93ce13c9456df0445b98346611b41412, type: 3}
@@ -3019,7 +3019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08863be4728ec9f4fb503ba1dc470d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalVelocity: 3
+  horizontalVelocity: 2.25
   jumpForce: 1
   forwardReference: {fileID: 1056523288}
   rigidBody: {fileID: 474142817}
