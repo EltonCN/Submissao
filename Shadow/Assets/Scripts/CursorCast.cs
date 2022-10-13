@@ -6,7 +6,10 @@ using UnityEngine.Events;
 
 public class CursorCast : MonoBehaviour
 {
+    [Tooltip("Layers that can be hit by the cursor.")]
     [SerializeField] LayerMask layermask;
+
+    [Tooltip("Methods to invoke when a hit occur.")]
     [SerializeField] UnityEvent<RaycastHit> onHit;
     
     float maxDistance = 10;
