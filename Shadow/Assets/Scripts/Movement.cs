@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float jumpForce = 1f;
     [SerializeField] Transform forwardReference;
     [SerializeField] Rigidbody rigidBody;
+    [SerializeField] bool allowJump = false;
 
     bool jumping = false;
     bool cancelada = false;
@@ -38,7 +39,12 @@ public class Movement : MonoBehaviour
 
         velocity.y = rigidBody.velocity.y;
 
-        if(jumping)
+        if(velocity.y > 0 && !allowJump)
+        {
+            velocity.y = 0;
+        }
+
+        if(jumping && allowJump)
         {
             rigidBody.AddForce(new Vector3(0,jumpForce,0), ForceMode.Impulse);
             jumping = false;
