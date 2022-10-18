@@ -10,7 +10,7 @@ public class CursorCast : MonoBehaviour
     [SerializeField] LayerMask layermask;
 
     [Tooltip("Methods to invoke when a hit occur.")]
-    [SerializeField] UnityEvent<RaycastHit> onHit;
+    [SerializeField] UnityEvent<RaycastHit, Vector2> onHit;
     
     float maxDistance = 10;
     int layerMask;
@@ -32,7 +32,7 @@ public class CursorCast : MonoBehaviour
 
         if(Physics.Raycast(ray, out hit, maxDistance, layermask))
         {
-            onHit.Invoke(hit);
+            onHit.Invoke(hit, position);
         }
 
     }
