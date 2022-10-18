@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2062.1973, g: 2226.2578, b: 2613.2148, a: 1}
+  m_IndirectSpecularColor: {r: 1966.6152, g: 2093.4766, b: 2397.7383, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 471201062}
   - component: {fileID: 471201066}
   - component: {fileID: 471201065}
+  - component: {fileID: 471201067}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -493,7 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newPointInterval: 0
   drawSurfaceDistance: 0.01
-  sygilDetectorModel: {fileID: 5022602860645237092, guid: ed7980128542e464d92c92b71f35ee73, type: 3}
+  sigilDetector: {fileID: 471201067}
 --- !u!120 &471201066
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -594,6 +595,30 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &471201067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471201061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa5a440fb473bb4787c487fb94a9428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sygilDetectorModel: {fileID: 5022602860645237092, guid: ed7980128542e464d92c92b71f35ee73, type: 3}
+  outputToSigil:
+  - outputIndex: 0
+    sigil: {fileID: 11400000, guid: b29cf73a675937340aeb19fb33a4ad46, type: 2}
+  - outputIndex: 1
+    sigil: {fileID: 11400000, guid: 593d2d729eeb0bb449118561ea008f7b, type: 2}
+  - outputIndex: 2
+    sigil: {fileID: 11400000, guid: 762b39d94d0a2ab40bc21a87fbda6221, type: 2}
+  - outputIndex: 3
+    sigil: {fileID: 11400000, guid: 05224133de3f2294096876cb26149b4c, type: 2}
+  - outputIndex: 4
+    sigil: {fileID: 11400000, guid: 0e0e4290aeed99a42a001b22a3da1a54, type: 2}
 --- !u!1 &815560209
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,51 +814,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -89.378, y: 0, z: 0}
---- !u!1 &1758869151
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1758869153}
-  - component: {fileID: 1758869152}
-  m_Layer: 0
-  m_Name: Test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1758869152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758869151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87da8feeafcbf09409a8f5320e27a74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sygilDetectorModel: {fileID: 5022602860645237092, guid: 7336cb0f8ff73ee4eb7248baef022404, type: 3}
---- !u!4 &1758869153
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758869151}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1094413, y: 4.192831, z: 0.29174542}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2086266947
 GameObject:
   m_ObjectHideFlags: 0

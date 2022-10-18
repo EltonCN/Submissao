@@ -50,7 +50,6 @@ public class TriangleModel : PolygonModel
 {
     public TriangleModel(float inlierDistance = 0.1f) : base(inlierDistance)
     {
-        
     }
 
     public override List<Vector2> model2verticesFunc(List<Vector2> modelPoints)
@@ -65,7 +64,10 @@ public class TriangleModel : PolygonModel
     }
 }
 
-public class PolygonFit
+/// <summary>
+/// Detect sigils using RANSAC
+/// </summary>
+public class PolygonFit : SigilDetector
 {
     Ransac<Vector2, List<Vector2>> ransac;
 
@@ -82,107 +84,35 @@ public class PolygonFit
             return 0;
         }
 
-        List<Vector2> sampledPoints = sample(points);
+        List<Vector2> sampledPoints = DrawUtils.sample(points);
 
-        center(sampledPoints);
-        scaleUnit(sampledPoints);
+        DrawUtils.center(sampledPoints);
+        DrawUtils.scaleUnit(sampledPoints);
 
         Tuple<List<Vector2>, int, List<Vector2>> ransacReturn = ransac.fit(sampledPoints);
 
         return ransacReturn.Item2;
     }
 
-    static public void center(List<Vector2> points)
+    
+    public override InkSigil detectSigil(List<Vector2> draw)
     {
-        Vector2 centroid = Vector2.zero;
-
-        foreach(Vector2 point in points)
+        Debug.LogWarning("PolygonFit not full implemented. Returning null.");
+        if(draw.Count > 100)
         {
-            centroid += point;
+            int inliers = checkFit(draw);
+
+            if(inliers > 80)
+            {
+                //Detected shape
+                return null;
+            }
+            else
+            {
+                return null;
+            }
         }
 
-        centroid /= points.Count;
-
-        for(int i = 0; i<points.Count; i++)
-        {
-            points[i] -= centroid;
-        }
+        return null;
     }
-
-    static public void scaleUnit(List<Vector2> points)
-    {
-        float xMin = float.MaxValue, 
-              xMax = float.MinValue, 
-              yMin = float.MaxValue, 
-              yMax = float.MinValue;
-
-        foreach(Vector2 point in points)
-        {
-            if(point.x < xMin)
-            {
-                xMin = point.x;
-            }
-            if(point.y < yMin)
-            {
-                yMin = point.y;
-            }
-            if(point.x > xMax)
-            {
-                xMax = point.x;
-            }
-            if(point.y > yMax)
-            {
-                yMax = point.y;
-            }
-        }
-
-        float x_range = xMax - xMin;
-        float y_range = yMax - yMin;
-
-        float scale;
-
-        if (x_range > y_range)
-        {
-            scale = 1/x_range;
-        }
-        else
-        {
-            scale = 1/y_range;
-        }
-
-        for(int i = 0; i<points.Count; i++)
-        {
-            points[i] *= scale;
-        }
-            
-    }
-
-    static public List<Vector2> sample(List<Vector2> points, int nPointsToSample=100)
-    {
-        List<Vector2> sampledPoints = new List<Vector2>();
-
-        int nPoint = points.Count;
-
-
-        List<int> indexes = new List<int>();
-        while(indexes.Count < nPointsToSample)
-        {
-            int index = UnityEngine.Random.Range(0, nPoint);
-
-            if(!indexes.Any(item => item == index))
-            {
-                indexes.Add(index);
-            }
-        }
-
-        indexes.Sort();
-
-        for(int i =0; i<nPointsToSample; i++)
-        {
-            sampledPoints.Add(points[indexes[i]]);
-        }
-
-        return sampledPoints;
-    }
-
 }
