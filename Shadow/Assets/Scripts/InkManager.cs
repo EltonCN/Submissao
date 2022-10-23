@@ -15,6 +15,7 @@ public class InkManager : MonoBehaviour
     [Tooltip("Distance from surface to create new draw point.")]
     [SerializeField] float drawSurfaceDistance = 0.01f;
 
+    [Tooltip("Sigil detector implemantation to use. Best one is NNSigilDetector.")]
     [SerializeField] SigilDetector sigilDetector;
 
     LineRenderer lineRenderer;

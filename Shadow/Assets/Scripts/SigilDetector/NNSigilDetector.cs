@@ -6,7 +6,10 @@ using Unity.Barracuda;
 [Serializable]
 public class SigilInfo
 {
+    [Tooltip("NN output index of this sigil.")]
     public int outputIndex;
+
+    [Tooltip("Corresponding sigil.")]
     public InkSigil sigil;
 }
 
@@ -14,6 +17,8 @@ public class NNSigilDetector : SigilDetector
 {
     [Tooltip("Model for sygil detection.")]
     [SerializeField] NNModel sygilDetectorModel;
+
+    [Tooltip("NN inference mode. Impacts the inference speed. See Unity Barracuda 'Using IWorker interface' documentation for modes explanation.")]
     [SerializeField] WorkerFactory.Type inferenceType;
 
     [Tooltip("Mapping from the NN output to sigils.")]

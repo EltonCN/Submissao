@@ -15,6 +15,7 @@ public class CursorCast : MonoBehaviour
     [Tooltip("Methods to invoke when a hit occur.")]
     [SerializeField] UnityEvent<RaycastHit, Vector2> onHit;
     
+    [Tooltip("Show the caster array for debugging.")]
     [SerializeField] bool showDebugRay = false;
     
 

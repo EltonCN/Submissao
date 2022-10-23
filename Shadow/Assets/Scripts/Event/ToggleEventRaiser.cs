@@ -8,7 +8,10 @@ using Unity.Barracuda;
 
 public class ToggleEventRaiser : MonoBehaviour
 {
+    [Tooltip("Event to raise in first raise.")]
     [SerializeField] GameEvent firstEvent;
+
+    [Tooltip("Event to raise in second raise.")]
     [SerializeField] GameEvent secondEvent;
 
     bool raiseFirst;
