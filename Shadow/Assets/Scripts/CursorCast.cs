@@ -9,11 +9,14 @@ public class CursorCast : MonoBehaviour
     [Tooltip("Layers that can be hit by the cursor.")]
     [SerializeField] LayerMask layermask;
 
+    [Tooltip("Max distance for hit check.")]
+    [SerializeField] float maxDistance = 100;
+
     [Tooltip("Methods to invoke when a hit occur.")]
     [SerializeField] UnityEvent<RaycastHit, Vector2> onHit;
     
-    float maxDistance = 10;
-    int layerMask;
+    [SerializeField] bool showDebugRay = false;
+    
 
 
     public void ReceiveCursorInput(InputAction.CallbackContext context)
@@ -28,7 +31,11 @@ public class CursorCast : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(position);
         RaycastHit hit;
 
-
+        if(showDebugRay)
+        {
+            Debug.DrawRay(ray.origin, 100*ray.direction, Color.green);
+        }
+        
 
         if(Physics.Raycast(ray, out hit, maxDistance, layermask))
         {
