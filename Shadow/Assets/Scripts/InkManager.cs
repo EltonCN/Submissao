@@ -21,6 +21,8 @@ public class InkManager : MonoBehaviour
     float lastTime;
     List<Vector2> mousePositions;
 
+    bool drawing;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,17 +34,17 @@ public class InkManager : MonoBehaviour
 
         mousePositions = new List<Vector2>();
 
-        
+        drawing = false;
     }
 
-    public void SwitchEnable()
+    public void StartDraw()
     {
-        this.enabled = !this.enabled;
+        drawing = true;
     }
 
-    void OnDisable()
+    public void EndDraw()
     {
-
+        drawing = false;
 
         if(mousePositions.Count >50 && sigilDetector != null)
         {
@@ -53,11 +55,10 @@ public class InkManager : MonoBehaviour
         mousePositions.Clear();
     }
 
-    
 
     public void ReceiveCursorHit(RaycastHit hit, Vector2 position)
     {
-        if(!this.enabled)
+        if(!drawing)
         {
             return;
         }
