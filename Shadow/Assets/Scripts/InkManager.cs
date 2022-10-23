@@ -47,8 +47,6 @@ public class InkManager : MonoBehaviour
         if(mousePositions.Count >50 && sigilDetector != null)
         {
             InkSigil detectedSigil = sigilDetector.detectSigil(mousePositions);
-
-            print(detectedSigil.name);
         }
 
         lineRenderer.positionCount = 0;

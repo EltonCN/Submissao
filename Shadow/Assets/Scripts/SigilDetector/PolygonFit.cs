@@ -95,7 +95,7 @@ public class PolygonFit : SigilDetector
     }
 
     
-    public override InkSigil detectSigil(List<Vector2> draw)
+    protected override InkSigil detectSigilImplementation(List<Vector2> draw)
     {
         Debug.LogWarning("PolygonFit not full implemented. Returning null.");
         if(draw.Count > 100)

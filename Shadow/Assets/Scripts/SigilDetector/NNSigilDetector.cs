@@ -14,6 +14,7 @@ public class NNSigilDetector : SigilDetector
 {
     [Tooltip("Model for sygil detection.")]
     [SerializeField] NNModel sygilDetectorModel;
+    [SerializeField] WorkerFactory.Type inferenceType;
 
     [Tooltip("Mapping from the NN output to sigils.")]
     [SerializeField] SigilInfo[] outputToSigil;
@@ -26,7 +27,7 @@ public class NNSigilDetector : SigilDetector
     {
         sygilDetector = ModelLoader.Load(sygilDetectorModel);
 
-        worker = WorkerFactory.CreateWorker(WorkerFactory.Type.ComputePrecompiled, sygilDetector);
+        worker = WorkerFactory.CreateWorker(inferenceType, sygilDetector);
 
         input = new Tensor(1, 100, 100, 1);
     }
@@ -64,7 +65,7 @@ public class NNSigilDetector : SigilDetector
         return copy;
     }
     
-    public override InkSigil detectSigil(List<Vector2> draw)
+    protected override InkSigil detectSigilImplementation(List<Vector2> draw)
     {
         List<Vector2> drawCopy = copyDraw(draw);
 
