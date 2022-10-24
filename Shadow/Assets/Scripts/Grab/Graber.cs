@@ -6,23 +6,47 @@ using UnityEngine.InputSystem;
 public class Graber : MonoBehaviour
 {
     [SerializeField] bool centerOnScreen;
+    [SerializeField] InputActionReference cursorAction;
     bool grabbing;
+    bool grabEnabled;
     Grabbable grabedObject;
 
-    // Start is called before the first frame update
     void Start()
     {
         grabbing = false;
+        grabEnabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        Vector2 cursorPosition = cursorAction.action.ReadValue<Vector2>();
+
+        processCursorPosition(cursorPosition);
+    }
+
+    public void EnableGrab()
+    {
+        grabEnabled = true;
+    }
+
+    public void DisableGrab()
+    {
+        grabEnabled = false;
+        
+        if(grabbing)
+        {
+            grabbing = false;
+            grabedObject.EndGrab();
+        }
         
     }
 
     public void ReceiveCursorHit(RaycastHit hit, Vector2 position)
     {
+        if(!grabEnabled)
+        {
+            return;
+        }
         if(!grabbing)
         {
             Grabbable grabbable = null;
@@ -51,30 +75,19 @@ public class Graber : MonoBehaviour
 
             grabedObject.StartGrab();
         }
-
-        
-        /*if(grabbing)
-        {
-            grabedObject.SetPosition(position);
-        }*/
             
     }
 
-    public void ReceiveCursorInput(InputAction.CallbackContext context)
+    void processCursorPosition(Vector2 cursorPosition)
     {
         if(grabbing)
         {
-            Vector2 cursorPosition;
             if(centerOnScreen)
             {
                 cursorPosition = new Vector2(Screen.width/2, Screen.height/2);
                 
             }
-            else
-            {
-                cursorPosition = context.ReadValue<Vector2>();
-            }
-            
+
             Ray ray = Camera.main.ScreenPointToRay(cursorPosition);
 
             grabedObject.SetPosition(ray.origin, ray.direction);
