@@ -6,13 +6,15 @@ using UnityEngine.InputSystem;
 
 public class ButtonRaiser : MonoBehaviour
 {
+    [Tooltip("Event to raise when button starts to be pressed.")]
     [SerializeField] GameEvent onStartEvent;
+
+    [Tooltip("Event to raise when button finishes being pressed.")]
     [SerializeField] GameEvent onEndEvent;
 
 
     public void ReceiveButton(InputAction.CallbackContext context)
     {
-        print(context.started.ToString()+" "+context.performed.ToString()+" "+context.canceled.ToString());
         if(context.started)
         {
             onStartEvent.Raise();

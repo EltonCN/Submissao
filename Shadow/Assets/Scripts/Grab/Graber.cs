@@ -5,8 +5,12 @@ using UnityEngine.InputSystem;
 
 public class Graber : MonoBehaviour
 {
+    [Tooltip("If should center the grabed object on the screen. Otherwise it will stay at the cursor position.")]
     [SerializeField] bool centerOnScreen;
+
+    [Tooltip("The cursor position action to update grabed object position.")]
     [SerializeField] InputActionReference cursorAction;
+    
     bool grabbing;
     bool grabEnabled;
     Grabbable grabedObject;

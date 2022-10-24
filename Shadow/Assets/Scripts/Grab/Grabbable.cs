@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Grabbable : MonoBehaviour
 {
-    [SerializeField] Rigidbody rigidbody;
+    [Tooltip("Rigidbody of the grabbable object. (Optional)")]
+    [SerializeField] new Rigidbody rigidbody;
+
+    [Tooltip("Distance the object will be from the camera when grabbed.")]
     [SerializeField] float cameraDistance = 1f;
+
+    [Tooltip("If should rotate the object to face the camera when grabbed.")]
     [SerializeField] bool faceCamera = true;
 
     bool previousKinematic;
