@@ -9,6 +9,13 @@ public class TypedGameEventListener<T> : GameEventListener
     [Tooltip("Response to invoke when Event is raised.")]
     [SerializeField]  UnityEvent<T> TypedResponse;
 
+    [SerializeField] UnityEventBase baseEvent;
+
+    public TypedGameEventListener()
+    {
+        baseEvent = new UnityEvent<float>();
+    }
+
     override protected IEnumerator RaiseResponse()
     {
         if(delay > 0)
