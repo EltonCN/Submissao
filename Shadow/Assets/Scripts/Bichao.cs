@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent( typeof( NavMeshAgent ) )]
 public class Bichao : MonoBehaviour {
-    private UnityEngine.AI.NavMeshAgent bichao;
+    private NavMeshAgent bichao;
     [SerializeField] GameObject player;
 
 
     // Start is called before the first frame update
     void Start() {
-        bichao = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        bichao = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -19,9 +20,5 @@ public class Bichao : MonoBehaviour {
         Vector3 newPos = transform.position - dirToPlayer;
 
         bichao.SetDestination( newPos );
-    }
-
-    void FixedUpdate() {
-
     }
 }
