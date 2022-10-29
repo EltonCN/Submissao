@@ -7,9 +7,13 @@ using UnityEngine;
 public class ShadowGameOver : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private GameObject player;
 
-    void onCollisionEnter()
+    void onCollisionEnter(Collider other)
     {
-        gameManager.GameOver();
+        if (other.CompareTag(player.tag))
+        {
+            gameManager.GameOver();
+        }
     }
 }
