@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class FootstepsSound : MonoBehaviour
 {
-
     public float footstepFrequency;
     public AudioSource locomotionSource;
     public AudioClip[] footstepClips;
