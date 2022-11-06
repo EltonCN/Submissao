@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1927.3175, g: 2058.481, b: 2368.8628, a: 1}
+  m_IndirectSpecularColor: {r: 2022.5941, g: 2190.8267, b: 2583.7654, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -54273,7 +54273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da0c5ba7853fdf04c9053421b1019f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footstepFrequency: 0.63
+  footstepFrequency: 0.65
   locomotionSource: {fileID: 1952119136}
   footstepClips:
   - {fileID: 8300000, guid: 0b470e8c596274c4bb2479401571a785, type: 3}
@@ -54717,7 +54717,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2eda3421e8d4ae747a54695b3bb34ddc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c9812d82c3d30944b9ed8778e28c1ba0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -37,7 +37,7 @@ public class FootstepsSound : MonoBehaviour
 
     void PlayFootstep()
     {
-        locomotionSource.clip = footstepClips[Random.Range(0, 5)];
+        locomotionSource.clip = footstepClips[Random.Range(0, 6)];
         locomotionSource.pitch = Random.Range(0.8f, 1.2f);
         locomotionSource.Play();
     }
