@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent( typeof( NavMeshAgent ) )]
 public class Bichao : MonoBehaviour {
@@ -23,6 +24,12 @@ public class Bichao : MonoBehaviour {
 
         if ( Input.GetButton( "Fire1" ) ) {
             Destroy( bichao.gameObject, 3 );
+        }
+    }
+
+    void OnCollisionEnter( Collision collider ) {
+        if ( collider.gameObject == player ) {
+            SceneManager.LoadScene( SceneManager.GetActiveScene().name );
         }
     }
 }
