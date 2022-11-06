@@ -20,5 +20,9 @@ public class Bichao : MonoBehaviour {
         Vector3 newPos = transform.position - dirToPlayer;
 
         bichao.SetDestination( newPos );
+
+        if ( Input.GetButton( "Fire1" ) ) {
+            Destroy( bichao.gameObject, 3 );
+        }
     }
 }
