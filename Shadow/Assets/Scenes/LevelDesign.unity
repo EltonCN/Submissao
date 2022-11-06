@@ -16472,7 +16472,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32528
+  m_Name: pb_Mesh32530
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -54589,8 +54589,9 @@ GameObject:
   - component: {fileID: 1958156941}
   - component: {fileID: 1958156943}
   - component: {fileID: 1958156942}
+  - component: {fileID: 1958156944}
   m_Layer: 0
-  m_Name: BGM
+  m_Name: BGM_loop1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54718,7 +54719,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c9812d82c3d30944b9ed8778e28c1ba0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -54803,6 +54804,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1958156944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958156940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82dcdb5d83e64344a9b1b200cedefe69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgm: {fileID: 1958156943}
+  loop1: {fileID: 8300000, guid: c9812d82c3d30944b9ed8778e28c1ba0, type: 3}
+  timer: 0
+  total: 0
 --- !u!43 &1965168054
 Mesh:
   m_ObjectHideFlags: 0
