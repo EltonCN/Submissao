@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FechaPorta
+  - PortaSaida
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - PostProcessing
   - Not in Reflection
   - 
-  - 
-  - 
+  - InkPlane
+  - Ink
   - 
   - 
   - 

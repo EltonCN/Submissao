@@ -1,0 +1,7 @@
+*.npy
+*.onnx
+*.csv
+
+sygil_detector*/*
+wandb/*
+models/*
