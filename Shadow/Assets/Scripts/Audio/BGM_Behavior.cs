@@ -6,8 +6,9 @@ public class BGM_Behavior : MonoBehaviour
 {
     public AudioSource bgm;
     public AudioClip loop1;
-    public float timer;
-    public float total;
+
+    private float timer;
+    private float total;
    
     // Start is called before the first frame update
     void Start()
