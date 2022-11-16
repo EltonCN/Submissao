@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 822191292517514726}
   - component: {fileID: 822191292517514725}
   - component: {fileID: 822191292517514724}
+  - component: {fileID: 822191293133030027}
+  - component: {fileID: 822191293133030028}
   m_Layer: 0
   m_Name: Bichao
   m_TagString: Untagged
@@ -135,3 +137,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  bichaoCollision: {fileID: 11400000, guid: 9d7a75602caf0a442b88aefaadc39fc3, type: 2}
+--- !u!114 &822191293133030027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822191292517514723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 260776186fca04e4aa2fbd57698ccbd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 58837bd1e0b88c64d8fcdafae8146a56, type: 2}
+  delay: 0
+  Response:
+    m_PersistentCalls:
+      m_Calls: []
+  TypedResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 822191293133030028}
+        m_TargetAssemblyTypeName: KillWhenSigil, Assembly-CSharp
+        m_MethodName: ReceiveDetectedSigil
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &822191293133030028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822191292517514723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a104ec0c2824fce438f4aab8e9a16a88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killSigil: {fileID: 11400000, guid: b29cf73a675937340aeb19fb33a4ad46, type: 2}

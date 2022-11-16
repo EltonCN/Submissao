@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.SceneManagement;
 
 [RequireComponent( typeof( NavMeshAgent ) )]
 public class Bichao : MonoBehaviour {
     private NavMeshAgent bichao;
     [SerializeField] GameObject player;
+    [SerializeField] GameEvent bichaoCollision;
 
 
     // Start is called before the first frame update
@@ -21,15 +21,15 @@ public class Bichao : MonoBehaviour {
         Vector3 newPos = transform.position - dirToPlayer;
 
         bichao.SetDestination( newPos );
+    }
 
-        if ( Input.GetButton( "Fire1" ) ) {
-            Destroy( bichao.gameObject, 3 );
-        }
+    public void KillBichao() {
+        Destroy( bichao.gameObject, 3 );
     }
 
     void OnCollisionEnter( Collision collider ) {
-        if ( collider.gameObject == player ) {
-            SceneManager.LoadScene( SceneManager.GetActiveScene().name );
+        if ( GameObject.ReferenceEquals( collider.gameObject, player ) ) {
+            bichaoCollision.Raise();
         }
     }
 }
