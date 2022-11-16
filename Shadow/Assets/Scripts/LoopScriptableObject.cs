@@ -7,4 +7,6 @@ using UnityEngine.SceneManagement;
 public class LoopScriptableObject : ScriptableObject
 {
     [SerializeField] public string sceneName;
+
+    //outras informações do loop
 }

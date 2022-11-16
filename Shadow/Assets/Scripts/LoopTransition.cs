@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 [Serializable]
 public class LoopTransition : MonoBehaviour
 {
+    private AsyncOperation scene;
+    private static int currentLoop = -1;
     public static List<LoopScriptableObject> loopList;
     [SerializeField] private LoopScriptableObject loop;
     [SerializeField] private GameObject player;
-    private LoopLoader loopLoader;
 
     void Start()
     {
@@ -18,72 +19,38 @@ public class LoopTransition : MonoBehaviour
         {
             loopList = new List<LoopScriptableObject>();
         }
-
-        loopList.Add(loop);
     }
 
-    void OnTriggerEnter(Collider other)
+    public AsyncOperation PreLoadLoop(LoopScriptableObject loopToLoad)
     {
-        if (other.CompareTag(player.tag))
-        {
-            loopLoader.PreLoadLoop(loop.sceneName);
-        }
+        scene = SceneManager.LoadSceneAsync(loopToLoad.sceneName, LoadSceneMode.Additive);
+
+        scene.allowSceneActivation = false;
+
+        //outras configurações de loop
+
+        return scene;
     }
 
-    public void CallActivateScene()
+    public void UnloadLoop(LoopScriptableObject loopToUnload)
     {
-        loopLoader.ActivateScene();
+        SceneManager.UnloadSceneAsync(loopToUnload.sceneName);
+    }
+
+    public void ActivateScene(AsyncOperation scene)
+    {
+        scene.allowSceneActivation = true;
+    }
+
+    public void LoadNextLoop()
+    {
+        currentLoop += 1;
+        scene = PreLoadLoop(loopList[currentLoop]);
+        ActivateScene(scene);
+    }
+
+    public void AddLoopToList(LoopScriptableObject newLoop)
+    {
+        loopList.Add(newLoop);
     }
 }
-
-
-//Para carregar loops aditivamente, se for o caso
-// [Serializable]
-// public class LoopTransition : MonoBehaviour
-// {
-//     public static List<LoopScriptableObject> loopList;
-//     [SerializeField] private LoopScriptableObject loop;
-//     [SerializeField] private GameObject player;
-//     private bool isLoaded;
-//     private LoopLoader loopLoader;
-
-//     void Start()
-//     {
-//         if (loopList == null)
-//         {
-//              loopList = new List<LoopScriptableObject>();
-//         }
-
-//         loopList.Add(loop);
-
-//         Scene checkScene = SceneManager.GetSceneByName(loop.sceneName);
-//         if (checkScene.IsValid())
-//         {
-//             isLoaded = true;
-//         }
-//     }
-
-//     void OnTriggerEnter(Collider other)
-//     {
-//         if (other.CompareTag(player.tag) && !isLoaded)
-//         {
-//             loopLoader.PreLoadLoop(loop.sceneName);
-
-//             isLoaded = true;
-//         }
-//     }
-
-//     void OnTriggerExit(Collider other)
-//     {
-//         if (other.CompareTag(player.tag) && isLoaded)
-//         {
-//             loopLoader.UnloadLoop(loop.sceneName);
-//             isLoaded = false;
-//         }
-//     }
-
-//     public void CallActivateScene()
-//     {
-//         loopLoader.ActivateScene();
-//     }
-// }
