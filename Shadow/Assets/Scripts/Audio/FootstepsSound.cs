@@ -50,6 +50,8 @@ public class FootstepsSound : MonoBehaviour
             locomotionSource.Play();
 
             currentTime = 0;
+
+            print(currentTime);
         }
     }
  }
