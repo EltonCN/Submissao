@@ -56628,6 +56628,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 677344896898577491, guid: 8b87dc8b342915c4d9b7d384f2e93687, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 677344896898577491, guid: 8b87dc8b342915c4d9b7d384f2e93687, type: 3}
       propertyPath: MaxDistance
       value: 20
       objectReference: {fileID: 0}
@@ -56700,6 +56704,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 671215123621864251, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: m_Volume
+      value: 0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 671215123621864251, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1515225796724499169, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
       propertyPath: horizontalVelocity
       value: 4.1
@@ -56825,6 +56837,10 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1515225798491681430, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515225798491681430, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -56891,6 +56907,14 @@ PrefabInstance:
     - target: {fileID: 1515225798697190044, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677903594577701575, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: m_Volume
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677903594577701575, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1515225796727925947, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
