@@ -4445,6 +4445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1515225798425361497}
+  exitDoor: {fileID: 0}
 --- !u!43 &204400486
 Mesh:
   m_ObjectHideFlags: 0
@@ -20916,125 +20917,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &806019210 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 822191292517514723, guid: 8b87dc8b342915c4d9b7d384f2e93687, type: 3}
-  m_PrefabInstance: {fileID: 822191293133030024}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &806019217
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 806019210}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6edbdb410465dbe4d9dc47f3bbc2831e, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1.03
-  MaxDistance: 25.8
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1.0133324
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.20939934
-      value: 0.626667
-      inSlope: -2.8661456
-      outSlope: -2.8661456
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.40830398
-      value: 0.20657243
-      inSlope: -0.96418124
-      outSlope: -0.96418124
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -0.34917966
-      outSlope: -0.34917966
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!43 &812664402
 Mesh:
   m_ObjectHideFlags: 0
@@ -56745,6 +56627,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 677344896898577491, guid: 8b87dc8b342915c4d9b7d384f2e93687, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 677344896898577491, guid: 8b87dc8b342915c4d9b7d384f2e93687, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 822191292517514723, guid: 8b87dc8b342915c4d9b7d384f2e93687, type: 3}
       propertyPath: m_Name
       value: Bichao
@@ -56755,7 +56645,7 @@ PrefabInstance:
       objectReference: {fileID: 1515225798425361497}
     - target: {fileID: 822191292517514725, guid: 8b87dc8b342915c4d9b7d384f2e93687, type: 3}
       propertyPath: m_Speed
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 822191292517514745, guid: 8b87dc8b342915c4d9b7d384f2e93687, type: 3}
       propertyPath: m_RootOrder
