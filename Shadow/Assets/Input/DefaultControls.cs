@@ -53,6 +53,33 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cursor"",
+                    ""type"": ""Value"",
+                    ""id"": ""0d6ba287-be03-4c78-b895-9b779ca20303"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Paint"",
+                    ""type"": ""Button"",
+                    ""id"": ""b5ae64b7-a9c3-4422-8b1a-cdc194ec8658"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Grab"",
+                    ""type"": ""Button"",
+                    ""id"": ""e934cd1c-629e-4359-a151-04c3adb61b25"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +159,39 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a27ea6a4-0427-446c-ab28-916c8cd2e7be"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cursor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""461fa2a6-7e89-4a09-961b-687680d18d4a"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Paint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""061a152f-a63b-4072-9a30-6df9c7f350cf"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Grab"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +203,9 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
         m_DefaultMap_Move = m_DefaultMap.FindAction("Move", throwIfNotFound: true);
         m_DefaultMap_RotateCamera = m_DefaultMap.FindAction("RotateCamera", throwIfNotFound: true);
         m_DefaultMap_Jump = m_DefaultMap.FindAction("Jump", throwIfNotFound: true);
+        m_DefaultMap_Cursor = m_DefaultMap.FindAction("Cursor", throwIfNotFound: true);
+        m_DefaultMap_Paint = m_DefaultMap.FindAction("Paint", throwIfNotFound: true);
+        m_DefaultMap_Grab = m_DefaultMap.FindAction("Grab", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -205,6 +268,9 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_DefaultMap_Move;
     private readonly InputAction m_DefaultMap_RotateCamera;
     private readonly InputAction m_DefaultMap_Jump;
+    private readonly InputAction m_DefaultMap_Cursor;
+    private readonly InputAction m_DefaultMap_Paint;
+    private readonly InputAction m_DefaultMap_Grab;
     public struct DefaultMapActions
     {
         private @DefaultControls m_Wrapper;
@@ -212,6 +278,9 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_DefaultMap_Move;
         public InputAction @RotateCamera => m_Wrapper.m_DefaultMap_RotateCamera;
         public InputAction @Jump => m_Wrapper.m_DefaultMap_Jump;
+        public InputAction @Cursor => m_Wrapper.m_DefaultMap_Cursor;
+        public InputAction @Paint => m_Wrapper.m_DefaultMap_Paint;
+        public InputAction @Grab => m_Wrapper.m_DefaultMap_Grab;
         public InputActionMap Get() { return m_Wrapper.m_DefaultMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -230,6 +299,15 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
                 @Jump.started -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnJump;
+                @Cursor.started -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnCursor;
+                @Cursor.performed -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnCursor;
+                @Cursor.canceled -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnCursor;
+                @Paint.started -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnPaint;
+                @Paint.performed -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnPaint;
+                @Paint.canceled -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnPaint;
+                @Grab.started -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnGrab;
+                @Grab.performed -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnGrab;
+                @Grab.canceled -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnGrab;
             }
             m_Wrapper.m_DefaultMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -243,6 +321,15 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Cursor.started += instance.OnCursor;
+                @Cursor.performed += instance.OnCursor;
+                @Cursor.canceled += instance.OnCursor;
+                @Paint.started += instance.OnPaint;
+                @Paint.performed += instance.OnPaint;
+                @Paint.canceled += instance.OnPaint;
+                @Grab.started += instance.OnGrab;
+                @Grab.performed += instance.OnGrab;
+                @Grab.canceled += instance.OnGrab;
             }
         }
     }
@@ -252,5 +339,8 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnRotateCamera(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnCursor(InputAction.CallbackContext context);
+        void OnPaint(InputAction.CallbackContext context);
+        void OnGrab(InputAction.CallbackContext context);
     }
 }
