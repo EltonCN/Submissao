@@ -9,8 +9,8 @@ public class BGM_Behavior : MonoBehaviour
     public AudioSource bgm;
     public AudioClip loop1;
 
-    private float timer;
-    private float total;
+    [SerializeField] float timer;
+    [SerializeField] float total;
    
     // Start is called before the first frame update
     void Start()
