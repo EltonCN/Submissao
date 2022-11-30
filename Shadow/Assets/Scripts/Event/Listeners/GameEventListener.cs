@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 
 [AddComponentMenu("Shadow/Game Event Listener")]
-public class GameEventListener : MonoBehaviour
+public class GameEventListener : MonoBehaviour, EventListener
 {
     [Tooltip("Event to register with.")]
     [SerializeField] protected GameEvent Event;
@@ -29,7 +29,7 @@ public class GameEventListener : MonoBehaviour
         Event.UnregisterListener(this);
     }
 
-    public void OnEventRaised()
+    public void OnEventRaised(string eventName)
     {
         if(gameObject.activeInHierarchy)
         {
@@ -38,7 +38,7 @@ public class GameEventListener : MonoBehaviour
         
     }
 
-    public void OnEventRaised<T>(T arg)
+    public void OnEventRaised<T>(string eventName, T arg)
     {
         if(gameObject.activeInHierarchy)
         {
