@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-[AddComponentMenu("Shadow/Game Event Listener")]
-public class GameEventListener : MonoBehaviour, EventListener
+[AddComponentMenu("Shadow/Game Event Listener Array")]
+public class GameEventListenerArray : MonoBehaviour, EventListener
 {
     [Tooltip("Event to register with.")]
-    [SerializeField] protected GameEvent Event;
+    [SerializeField] protected GameEvent[] events;
 
     [Tooltip("Time to wait before raising response, in seconds.")]
     [SerializeField] protected float delay = 0;
@@ -21,12 +21,18 @@ public class GameEventListener : MonoBehaviour, EventListener
 
     private void OnEnable()
     {
-        Event.RegisterListener(this);
+        foreach(GameEvent Event in events)
+        {
+            Event.RegisterListener(this);
+        }
     }
 
     private void OnDisable()
     {
-        Event.UnregisterListener(this);
+        foreach(GameEvent Event in events)
+        {
+            Event.UnregisterListener(this);
+        }
     }
 
     public void OnEventRaised(string eventName)

@@ -9,30 +9,30 @@ public class GameEvent : ScriptableObject
     /// <summary>
     /// The list of listeners that this event will notify if it is raised.
     /// </summary>
-    private readonly List<GameEventListener> eventListeners = 
-        new List<GameEventListener>();
+    private readonly List<EventListener> eventListeners = 
+        new List<EventListener>();
 
     
 
     public void Raise()
     {
         for(int i = eventListeners.Count -1; i >= 0; i--)
-            eventListeners[i].OnEventRaised();
+            eventListeners[i].OnEventRaised(this.name);
     }
 
     public void Raise<T>(T arg)
     {
         for(int i = eventListeners.Count -1; i >= 0; i--)
-            eventListeners[i].OnEventRaised<T>(arg);
+            eventListeners[i].OnEventRaised<T>(this.name, arg);
     }
 
-    public void RegisterListener(GameEventListener listener)
+    public void RegisterListener(EventListener listener)
     {
         if (!eventListeners.Contains(listener))
             eventListeners.Add(listener);
     }
 
-    public void UnregisterListener(GameEventListener listener)
+    public void UnregisterListener(EventListener listener)
     {
         if (eventListeners.Contains(listener))
             eventListeners.Remove(listener);
