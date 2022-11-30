@@ -31,7 +31,6 @@ public class ButtonRaiser : MonoBehaviour
 
     public void ReceiveButton(InputAction.CallbackContext context)
     {
-        print("Teste "+ context.phase.ToString()+ " "+ context.started.ToString()+" "+context.canceled.ToString());
         if(context.started)
         {
             onStartEvent.Raise();
