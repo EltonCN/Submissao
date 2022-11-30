@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 288368114}
   - component: {fileID: 288368113}
   m_Layer: 0
-  m_Name: TestStartEndDraw
+  m_Name: SwitchMode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,6 +183,14 @@ MonoBehaviour:
     m_ActionId: 0d6ba287-be03-4c78-b895-9b779ca20303
     m_ActionName: DefaultMap/Cursor[/Mouse/position]
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b5ae64b7-a9c3-4422-8b1a-cdc194ec8658
+    m_ActionName: DefaultMap/Paint[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e934cd1c-629e-4359-a151-04c3adb61b25
+    m_ActionName: DefaultMap/Grab[/Mouse/rightButton]
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 288368114}
         m_TargetAssemblyTypeName: ToggleEventRaiser, Assembly-CSharp
@@ -196,8 +204,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: b5ae64b7-a9c3-4422-8b1a-cdc194ec8658
-    m_ActionName: DefaultMap/Paint[/Mouse/leftButton]
+    m_ActionId: 58df8653-4b40-4f79-bbe2-d6a9752fc7c1
+    m_ActionName: DefaultMap/SwitchPaintingMode[/Keyboard/p]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: DefaultMap
@@ -224,13 +232,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288368112}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.7894435, y: -1.5786788, z: 4.030251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 801788646}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &292391681
 GameObject:
@@ -589,6 +597,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!4 &801788646 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5210612083483770150, guid: 56a71de2614f0ef4099aa463f1055d13, type: 3}
+  m_PrefabInstance: {fileID: 5210612083149604865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &815560209
 GameObject:
   m_ObjectHideFlags: 0
