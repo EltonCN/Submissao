@@ -550,6 +550,81 @@ namespace Lean.Localization
 				currentLanguage = defaultLanguage;
 			}
 		}
+
+#if UNITY_EDITOR
+		/// <summary>This exports all text phrases in the LeanLocalization component for the Language specified by this component.</summary>
+		[ContextMenu("Export CurrentLanguage To CSV (Comma Format)")]
+		private void ExportTextAsset()
+		{
+			if (string.IsNullOrEmpty(currentLanguage) == false)
+			{
+				// Find where we want to save the file
+				var path = UnityEditor.EditorUtility.SaveFilePanelInProject("Export Text Asset for " + currentLanguage, currentLanguage, "csv", "");
+
+				// Make sure we didn't cancel the panel
+				if (string.IsNullOrEmpty(path) == false)
+				{
+					DoExportTextAsset(path);
+				}
+			}
+		}
+
+		private void DoExportTextAsset(string path)
+		{
+			var data = "";
+			var gaps = false;
+
+			// Add all phrase names and existing translations to lines
+			foreach (var pair in CurrentTranslations)
+			{
+				var translation = pair.Value;
+
+				if (gaps == true)
+				{
+					data += System.Environment.NewLine;
+				}
+
+				data += pair.Key + ",\"";
+				gaps  = true;
+
+				if (translation.Data is string)
+				{
+					var text = (string)translation.Data;
+
+					// Replace all new line permutations with the new line token
+					text = text.Replace("\r\n", "\n");
+					text = text.Replace("\n\r", "\n");
+					text = text.Replace("\r", "\n");
+
+					data += text;
+				}
+
+				data += "\"";
+			}
+
+			// Write text to file
+			using (var file = System.IO.File.OpenWrite(path))
+			{
+				var encoding = new System.Text.UTF8Encoding();
+				var bytes    = encoding.GetBytes(data);
+
+				file.Write(bytes, 0, bytes.Length);
+			}
+
+			// Import asset into project
+			UnityEditor.AssetDatabase.ImportAsset(path);
+
+			// Replace Source with new Text Asset?
+			var textAsset = (TextAsset)UnityEditor.AssetDatabase.LoadAssetAtPath(path, typeof(TextAsset));
+
+			if (textAsset != null)
+			{
+				UnityEditor.EditorGUIUtility.PingObject(textAsset);
+
+				UnityEditor.EditorUtility.SetDirty(this);
+			}
+		}
+#endif
 	}
 }
 
