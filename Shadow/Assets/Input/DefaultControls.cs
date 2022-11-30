@@ -80,6 +80,15 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchPaintingMode"",
+                    ""type"": ""Button"",
+                    ""id"": ""58df8653-4b40-4f79-bbe2-d6a9752fc7c1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -192,6 +201,17 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
                     ""action"": ""Grab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""db47b0cd-229d-4d1c-b357-8e814f2eccf0"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchPaintingMode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -206,6 +226,7 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
         m_DefaultMap_Cursor = m_DefaultMap.FindAction("Cursor", throwIfNotFound: true);
         m_DefaultMap_Paint = m_DefaultMap.FindAction("Paint", throwIfNotFound: true);
         m_DefaultMap_Grab = m_DefaultMap.FindAction("Grab", throwIfNotFound: true);
+        m_DefaultMap_SwitchPaintingMode = m_DefaultMap.FindAction("SwitchPaintingMode", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -271,6 +292,7 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_DefaultMap_Cursor;
     private readonly InputAction m_DefaultMap_Paint;
     private readonly InputAction m_DefaultMap_Grab;
+    private readonly InputAction m_DefaultMap_SwitchPaintingMode;
     public struct DefaultMapActions
     {
         private @DefaultControls m_Wrapper;
@@ -281,6 +303,7 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
         public InputAction @Cursor => m_Wrapper.m_DefaultMap_Cursor;
         public InputAction @Paint => m_Wrapper.m_DefaultMap_Paint;
         public InputAction @Grab => m_Wrapper.m_DefaultMap_Grab;
+        public InputAction @SwitchPaintingMode => m_Wrapper.m_DefaultMap_SwitchPaintingMode;
         public InputActionMap Get() { return m_Wrapper.m_DefaultMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -308,6 +331,9 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
                 @Grab.started -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnGrab;
                 @Grab.performed -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnGrab;
                 @Grab.canceled -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnGrab;
+                @SwitchPaintingMode.started -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnSwitchPaintingMode;
+                @SwitchPaintingMode.performed -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnSwitchPaintingMode;
+                @SwitchPaintingMode.canceled -= m_Wrapper.m_DefaultMapActionsCallbackInterface.OnSwitchPaintingMode;
             }
             m_Wrapper.m_DefaultMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -330,6 +356,9 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
                 @Grab.started += instance.OnGrab;
                 @Grab.performed += instance.OnGrab;
                 @Grab.canceled += instance.OnGrab;
+                @SwitchPaintingMode.started += instance.OnSwitchPaintingMode;
+                @SwitchPaintingMode.performed += instance.OnSwitchPaintingMode;
+                @SwitchPaintingMode.canceled += instance.OnSwitchPaintingMode;
             }
         }
     }
@@ -342,5 +371,6 @@ public partial class @DefaultControls : IInputActionCollection2, IDisposable
         void OnCursor(InputAction.CallbackContext context);
         void OnPaint(InputAction.CallbackContext context);
         void OnGrab(InputAction.CallbackContext context);
+        void OnSwitchPaintingMode(InputAction.CallbackContext context);
     }
 }
