@@ -16681,9 +16681,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 671215123621864251, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 671215123621864251, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1515225796724499169, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
       propertyPath: horizontalVelocity
-      value: 4.1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1515225796727925946, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
       propertyPath: m_VerticalAxis.m_MaxSpeed
@@ -16876,6 +16884,14 @@ PrefabInstance:
     - target: {fileID: 1515225798697190044, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677903594577701575, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: m_Volume
+      value: 0.804
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677903594577701575, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.393
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1515225796727925947, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
