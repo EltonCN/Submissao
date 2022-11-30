@@ -10,7 +10,7 @@ public class LoopTransition : MonoBehaviour
     private AsyncOperation scene;
     private static int currentLoop = -1;
     public static List<LoopScriptableObject> loopList;
-    [SerializeField] private LoopScriptableObject loop;
+    [SerializeField] LoopScriptableObject[] loop;
     [SerializeField] private GameObject player;
 
     void Start()
