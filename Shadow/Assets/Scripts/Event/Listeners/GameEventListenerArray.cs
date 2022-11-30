@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-
 [AddComponentMenu("Shadow/Game Event Listener Array")]
 public class GameEventListenerArray : MonoBehaviour, EventListener
 {
@@ -16,8 +15,8 @@ public class GameEventListenerArray : MonoBehaviour, EventListener
     [Tooltip("Response to invoke when Event is raised.")]
     [SerializeField] UnityEvent Response;
 
-    
-
+    public AudioSource soundSource;
+    public AudioClip messageClip;
 
     private void OnEnable()
     {
@@ -40,6 +39,8 @@ public class GameEventListenerArray : MonoBehaviour, EventListener
         if(gameObject.activeInHierarchy)
         {
             StartCoroutine("RaiseResponse");
+            soundSource.pitch = Random.Range(0.8f, 1.2f);
+            soundSource.Play();
         }
         
     }
