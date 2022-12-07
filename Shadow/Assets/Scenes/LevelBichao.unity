@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1932.1504, g: 2063.7715, b: 2374.629, a: 1}
+  m_IndirectSpecularColor: {r: 2027.6152, g: 2196.457, b: 2590.0586, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4446,6 +4446,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1515225798425361497}
   exitDoor: {fileID: 1285661052}
+  onDoorClose:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!43 &204400486
 Mesh:
   m_ObjectHideFlags: 0
@@ -49544,6 +49547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InkManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5210612083483770148, guid: 56a71de2614f0ef4099aa463f1055d13, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5210612083483770150, guid: 56a71de2614f0ef4099aa463f1055d13, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -56533,7 +56540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &2067010943
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -56878,7 +56885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 822191292517514745, guid: 8b87dc8b342915c4d9b7d384f2e93687, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 822191292517514745, guid: 8b87dc8b342915c4d9b7d384f2e93687, type: 3}
       propertyPath: m_LocalPosition.y
@@ -56886,7 +56893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 822191292517514745, guid: 8b87dc8b342915c4d9b7d384f2e93687, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.15
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 822191292517514745, guid: 8b87dc8b342915c4d9b7d384f2e93687, type: 3}
       propertyPath: m_LocalRotation.w
