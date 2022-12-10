@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5999031111101820879}
   - component: {fileID: 3241224220049564130}
   m_Layer: 0
-  m_Name: FloorAfterExitDoor
+  m_Name: DoorController
   m_TagString: FechaPorta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2648
+  m_VersionIndex: 2663
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -357,35 +357,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89214d646c517054b973581998186419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  doorClosed: 0
   exitDoor: {fileID: 8663781999864308868}
+  closedDoor: {fileID: 2058674542302701993}
+  openedDoor: {fileID: 3167160523648911039}
   onDoorClose:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2058674542302701993}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 3167160523648911039}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &8663781999864308868
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +392,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8663781999864308868}
-  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: -0.5}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 8, y: 0, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -424,7 +402,7 @@ Transform:
   - {fileID: 2359836846374755333}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
 --- !u!114 &7590915826375979474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,7 +615,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 807
+  m_VersionIndex: 822
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -748,9 +726,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.000153
       objectReference: {fileID: 0}
+    - target: {fileID: 5081965697393498409, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0000041
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081965697393498409, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0000549
+      objectReference: {fileID: 0}
     - target: {fileID: 5783689307154004176, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560612158005823404, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0002217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560612158005823404, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0001245
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560612158005823404, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0001056
       objectReference: {fileID: 0}
     - target: {fileID: 6560612158005823404, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -790,7 +788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7646174330789722320, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 40.5171
+      value: 41.542187
       objectReference: {fileID: 0}
     - target: {fileID: 7646174330789722320, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
       propertyPath: m_LocalScale.y
@@ -871,6 +869,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.000153
       objectReference: {fileID: 0}
+    - target: {fileID: 5081965697393498409, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.000055
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560612158005823404, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0001245
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560612158005823404, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0001057
+      objectReference: {fileID: 0}
     - target: {fileID: 7014210899558670954, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
       propertyPath: m_Name
       value: Door
@@ -885,7 +895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7646174330789722320, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 40.5171
+      value: 41.542187
       objectReference: {fileID: 0}
     - target: {fileID: 7646174330789722320, guid: 27e0c351e75536340aab60a130e36fdc, type: 3}
       propertyPath: m_LocalScale.y

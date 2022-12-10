@@ -4,16 +4,46 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class CloseExitDoor : MonoBehaviour {
-    [SerializeField] GameObject player;
+    [SerializeField] bool doorClosed = false;
     [SerializeField] GameObject exitDoor;
+    [SerializeField] GameObject closedDoor;
+    [SerializeField] GameObject openedDoor;
     [SerializeField] UnityEvent onDoorClose;
-    private bool doorClosed = false;
+    
+    
 
     void OnCollisionEnter( Collision collider ) {
-        if ( !doorClosed && GameObject.ReferenceEquals(collider.gameObject, player) ) {
-            exitDoor.GetComponent<MeshCollider>().enabled = true;
-            doorClosed = true;
-            onDoorClose.Invoke();
+        if ( !doorClosed && collider.gameObject.tag == "Player") {
+            closeDoor();
+        }
+    }
+
+    void closeDoor()
+    {
+        exitDoor.GetComponent<MeshCollider>().enabled = true;
+        closedDoor.SetActive(true);
+        openedDoor.SetActive(false);
+        doorClosed = true;
+        onDoorClose.Invoke();
+    }
+
+    void openDoor()
+    {
+        exitDoor.GetComponent<MeshCollider>().enabled = false;
+        closedDoor.SetActive(false);
+        openedDoor.SetActive(true);
+        doorClosed = false;
+    }
+
+    void OnValidate()
+    {
+        if(doorClosed)
+        {
+            closeDoor();
+        }
+        else
+        {
+            openDoor();
         }
     }
 }
