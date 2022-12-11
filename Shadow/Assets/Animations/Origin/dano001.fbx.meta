@@ -1,0 +1,478 @@
+fileFormatVersion: 2
+guid: 22c6c3bf80af1894e905b01e067bee2d
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: 8190280224565886563
+    second: dano001_mcp
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'dano001_mcp' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Lucas_30_11:Spine3' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'Lucas_30_11:Neck1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: dano001_mcp
+      takeName: dano001_mcp
+      internalID: 0
+      firstFrame: 183
+      lastFrame: 504
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Lucas_30_11:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lucas_30_11:Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: dano001(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:Hips
+      parentName: dano001(Clone)
+      position: {x: 0, y: -0.123968005, z: 0.8758482}
+      rotation: {x: -0.003129871, y: 0.014405711, z: 0.9993879, w: -0.031725343}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:Spine
+      parentName: Lucas_30_11:Hips
+      position: {x: -0, y: 0, z: 0.10687625}
+      rotation: {x: 0.09675613, y: -0.001836454, z: -0.012344634, w: 0.9952299}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:Spine1
+      parentName: Lucas_30_11:Spine
+      position: {x: -0, y: 0, z: 0.10687625}
+      rotation: {x: -0.033975266, y: -0.0034320415, z: -0.011999318, w: 0.99934477}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:Spine2
+      parentName: Lucas_30_11:Spine1
+      position: {x: -0, y: 0, z: 0.10687625}
+      rotation: {x: -0.09975764, y: 0.0061913542, z: -0.012413182, w: 0.99491507}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:Spine3
+      parentName: Lucas_30_11:Spine2
+      position: {x: -0, y: 0, z: 0.10687625}
+      rotation: {x: -0.05626509, y: 0.0067269173, z: -0.012131304, w: 0.9983195}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:Neck
+      parentName: Lucas_30_11:Spine3
+      position: {x: -0, y: 0.0137412315, z: 0.13741231}
+      rotation: {x: -0.0021882015, y: -0.010412966, z: 0.016124954, w: 0.9998134}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:Neck1
+      parentName: Lucas_30_11:Neck
+      position: {x: -0, y: 0, z: 0.044633787}
+      rotation: {x: -0.03713669, y: -0.015359994, z: 0.016344974, w: 0.9990585}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:Head
+      parentName: Lucas_30_11:Neck1
+      position: {x: -0, y: 0, z: 0.044633787}
+      rotation: {x: 0.04562735, y: -0.024133243, z: 0.013602736, w: 0.9985744}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:HeadEnd
+      parentName: Lucas_30_11:Head
+      position: {x: -0, y: 0, z: 0.08841727}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:RightShoulder
+      parentName: Lucas_30_11:Spine3
+      position: {x: -0, y: 0, z: 0.09618862}
+      rotation: {x: -0.019888584, y: -0.78468114, z: -0.015698887, w: 0.61938155}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:RightArm
+      parentName: Lucas_30_11:RightShoulder
+      position: {x: -0, y: 0, z: 0.17420827}
+      rotation: {x: 0.0641332, y: 0.07431124, z: 0.20271274, w: 0.9743061}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:RightForeArm
+      parentName: Lucas_30_11:RightArm
+      position: {x: -0, y: 0, z: 0.2878826}
+      rotation: {x: -0.019894168, y: 0.012173633, z: 0.13335823, w: 0.99079347}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:RightHand
+      parentName: Lucas_30_11:RightForeArm
+      position: {x: -0, y: 0, z: 0.23517087}
+      rotation: {x: 0.06748774, y: -0.15526119, z: 0.010632307, w: 0.9855082}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:RightHandThumb1
+      parentName: Lucas_30_11:RightHand
+      position: {x: -0.013014254, y: 0.022494925, z: 0.030251795}
+      rotation: {x: -0.38480818, y: 0, z: -0, w: 0.9229966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:RightHandMiddle1
+      parentName: Lucas_30_11:RightHand
+      position: {x: -0, y: -0.0007756871, z: 0.08067145}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:LeftShoulder
+      parentName: Lucas_30_11:Spine3
+      position: {x: -0, y: 0, z: 0.09618862}
+      rotation: {x: -0.025099456, y: 0.76398087, z: 0.021170901, w: 0.6444029}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:LeftArm
+      parentName: Lucas_30_11:LeftShoulder
+      position: {x: -0, y: 0, z: 0.17420827}
+      rotation: {x: 0.024024025, y: -0.08867882, z: -0.21802726, w: 0.97160846}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:LeftForeArm
+      parentName: Lucas_30_11:LeftArm
+      position: {x: -0, y: 0, z: 0.2878826}
+      rotation: {x: -0.023746481, y: -0.010342638, z: -0.13322988, w: 0.99074674}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:LeftHand
+      parentName: Lucas_30_11:LeftForeArm
+      position: {x: -0, y: 0, z: 0.23517087}
+      rotation: {x: 0.05583581, y: 0.1579983, z: -0.008948868, w: 0.98581886}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:LeftHandThumb1
+      parentName: Lucas_30_11:LeftHand
+      position: {x: 0.013014254, y: 0.022494925, z: 0.030251795}
+      rotation: {x: -0.38480818, y: 0, z: -0, w: 0.9229966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:LeftHandMiddle1
+      parentName: Lucas_30_11:LeftHand
+      position: {x: -0, y: -0.0007756871, z: 0.08067145}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:RightUpLeg
+      parentName: Lucas_30_11:Hips
+      position: {x: -0.08275953, y: 0, z: 0}
+      rotation: {x: -0.0295135, y: 0.07060549, z: 0.0361436, w: 0.99641234}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:RightLeg
+      parentName: Lucas_30_11:RightUpLeg
+      position: {x: -0, y: 0, z: -0.43280995}
+      rotation: {x: -0.10047987, y: 0, z: -0, w: 0.9949391}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:RightFoot
+      parentName: Lucas_30_11:RightLeg
+      position: {x: -0, y: 0, z: -0.41330418}
+      rotation: {x: 0.045443855, y: -0.04833047, z: 0.018334838, w: 0.9976286}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:RightToeBase
+      parentName: Lucas_30_11:RightFoot
+      position: {x: -0, y: 0.15862028, z: 0}
+      rotation: {x: 0.1003254, y: -0, z: -0, w: 0.9949547}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:RightToeBaseEnd
+      parentName: Lucas_30_11:RightToeBase
+      position: {x: -0, y: 0.06451427, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:LeftUpLeg
+      parentName: Lucas_30_11:Hips
+      position: {x: 0.08275953, y: 0, z: 0}
+      rotation: {x: -0.05236346, y: -0.034956228, z: -0.04022625, w: 0.9972051}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:LeftLeg
+      parentName: Lucas_30_11:LeftUpLeg
+      position: {x: -0, y: 0, z: -0.43280995}
+      rotation: {x: -0.06462846, y: 0, z: -0, w: 0.9979094}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:LeftFoot
+      parentName: Lucas_30_11:LeftLeg
+      position: {x: -0, y: 0, z: -0.41330418}
+      rotation: {x: 0.05688496, y: 0.07142726, z: -0.11985926, w: 0.98858285}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:LeftToeBase
+      parentName: Lucas_30_11:LeftFoot
+      position: {x: -0, y: 0.15862028, z: 0}
+      rotation: {x: 0.008992391, y: -0, z: -0, w: 0.9999596}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lucas_30_11:LeftToeBaseEnd
+      parentName: Lucas_30_11:LeftToeBase
+      position: {x: -0, y: 0.055267554, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
