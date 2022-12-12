@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 669b9fd24864a9c4e93dab510c8c131c
+guid: e4c43b2a09f682d4ca5f2d73ab021ad0
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
-      74: 542819040138490922
-    second: extra001_mcp
+      74: -1833129404238098643
+    second: correr001_mcp
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -22,7 +22,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'extra001_mcp' has import animation warnings
+    animationImportWarnings: "\nClip 'correr001_mcp' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'Lucas_30_11:Spine3' is inbetween humanoid
       transforms and has rotation animation that will be discarded.\n\t'Lucas_30_11:Neck1'
@@ -38,7 +38,36 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: correr001_mcp
+      takeName: correr001_mcp
+      internalID: 0
+      firstFrame: 158
+      lastFrame: 290
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -255,7 +284,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Lucas_30_11:Spine2
+    - boneName: Lucas_30_11:Spine3
       humanName: UpperChest
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -264,50 +293,50 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: extra001(Clone)
+    - name: correr001(Clone)
       parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:Hips
-      parentName: extra001(Clone)
-      position: {x: 0, y: 0.08573842, z: 0.8787764}
-      rotation: {x: 0.0036223186, y: 0.012146562, z: 0.99985975, w: -0.010948276}
+      parentName: correr001(Clone)
+      position: {x: -0.0000000037252903, y: -0.00000011920929, z: 0.87629646}
+      rotation: {x: -0.009776152, y: -0.0020451138, z: 0.99989694, w: 0.010312498}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:Spine
       parentName: Lucas_30_11:Hips
       position: {x: -0, y: 0, z: 0.10687625}
-      rotation: {x: 0.0917422, y: -0.00076659746, z: -0.006173132, w: 0.99576336}
+      rotation: {x: 0.087760165, y: 0.008564398, z: -0.0038955875, w: 0.9960972}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:Spine1
       parentName: Lucas_30_11:Spine
       position: {x: -0, y: 0, z: 0.10687625}
-      rotation: {x: -0.039015923, y: -0.0015657949, z: -0.006020259, w: 0.99921924}
+      rotation: {x: -0.043007463, y: 0.007982652, z: -0.004980139, w: 0.9990305}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:Spine2
       parentName: Lucas_30_11:Spine1
       position: {x: -0, y: 0, z: 0.10687625}
-      rotation: {x: -0.07868185, y: -0.0057053086, z: -0.0058382647, w: 0.99686635}
+      rotation: {x: -0.08027432, y: -0.008015786, z: -0.0042805956, w: 0.9967314}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:Spine3
       parentName: Lucas_30_11:Spine2
       position: {x: -0, y: 0, z: 0.10687625}
-      rotation: {x: -0.035124246, y: -0.005445217, z: -0.0060815704, w: 0.99934965}
+      rotation: {x: -0.036721088, y: -0.007821442, z: -0.0046261656, w: 0.99928427}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:Neck
       parentName: Lucas_30_11:Spine3
       position: {x: -0, y: 0.0137412315, z: 0.13741231}
-      rotation: {x: 0.03472538, y: 0.017715497, z: 0.012628481, w: 0.99916005}
+      rotation: {x: 0.011594873, y: -0.00032848158, z: 0.009422473, w: 0.99988836}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:Neck1
       parentName: Lucas_30_11:Neck
       position: {x: -0, y: 0, z: 0.044633787}
-      rotation: {x: -0.010849983, y: -0.010242728, z: 0.013860884, w: 0.99979264}
+      rotation: {x: -0.027862169, y: -0.009407335, z: 0.009823106, w: 0.9995192}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:Head
       parentName: Lucas_30_11:Neck1
       position: {x: -0, y: 0, z: 0.044633787}
-      rotation: {x: 0.057235315, y: -0.05030038, z: 0.009046592, w: 0.9970517}
+      rotation: {x: 0.0487272, y: -0.023050306, z: 0.0074201203, w: 0.9985185}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:HeadEnd
       parentName: Lucas_30_11:Head
@@ -317,22 +346,22 @@ ModelImporter:
     - name: Lucas_30_11:RightShoulder
       parentName: Lucas_30_11:Spine3
       position: {x: -0, y: 0, z: 0.09618862}
-      rotation: {x: -0.0122034075, y: -0.7701415, z: -0.010104408, w: 0.6376763}
+      rotation: {x: -0.031725887, y: -0.7782286, z: -0.025546866, w: 0.6266587}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:RightArm
       parentName: Lucas_30_11:RightShoulder
       position: {x: -0, y: 0, z: 0.17420827}
-      rotation: {x: 0.044725917, y: 0.08896144, z: 0.21342516, w: 0.97187203}
+      rotation: {x: 0.056047957, y: 0.07289947, z: 0.22310698, w: 0.97044706}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:RightForeArm
       parentName: Lucas_30_11:RightArm
       position: {x: -0, y: 0, z: 0.2878826}
-      rotation: {x: -0.021061176, y: 0.012446622, z: 0.16543947, w: 0.98591655}
+      rotation: {x: -0.020218955, y: 0.011681077, z: 0.14139637, w: 0.98967767}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:RightHand
       parentName: Lucas_30_11:RightForeArm
       position: {x: -0, y: 0, z: 0.23517087}
-      rotation: {x: 0.07047642, y: -0.13576396, z: 0.009682566, w: 0.988184}
+      rotation: {x: 0.060039688, y: -0.15190229, z: 0.00924472, w: 0.986527}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:RightHandThumb1
       parentName: Lucas_30_11:RightHand
@@ -347,22 +376,22 @@ ModelImporter:
     - name: Lucas_30_11:LeftShoulder
       parentName: Lucas_30_11:Spine3
       position: {x: -0, y: 0, z: 0.09618862}
-      rotation: {x: -0.0027400025, y: 0.7683999, z: 0.0022820046, w: 0.63996005}
+      rotation: {x: -0.014476044, y: 0.77598417, z: 0.011761588, w: 0.63047653}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:LeftArm
       parentName: Lucas_30_11:LeftShoulder
       position: {x: -0, y: 0, z: 0.17420827}
-      rotation: {x: 0.007928069, y: -0.06499438, z: -0.26288095, w: 0.962604}
+      rotation: {x: 0.044327073, y: -0.095711336, z: -0.28189304, w: 0.9536303}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:LeftForeArm
       parentName: Lucas_30_11:LeftArm
       position: {x: -0, y: 0, z: 0.2878826}
-      rotation: {x: -0.021650275, y: -0.011873865, z: -0.18526176, w: 0.98237896}
+      rotation: {x: -0.02277056, y: -0.009456533, z: -0.15773436, w: 0.9871737}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:LeftHand
       parentName: Lucas_30_11:LeftForeArm
       position: {x: -0, y: 0, z: 0.23517087}
-      rotation: {x: 0.08341621, y: 0.10588533, z: -0.008914268, w: 0.9908333}
+      rotation: {x: 0.06784471, y: 0.15378863, z: -0.01058495, w: 0.98571503}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:LeftHandThumb1
       parentName: Lucas_30_11:LeftHand
@@ -377,22 +406,22 @@ ModelImporter:
     - name: Lucas_30_11:RightUpLeg
       parentName: Lucas_30_11:Hips
       position: {x: -0.08275953, y: 0, z: 0}
-      rotation: {x: -0.020043755, y: 0.045901027, z: 0.032984436, w: 0.9982001}
+      rotation: {x: -0.0004957525, y: 0.06545668, z: 0.050429113, w: 0.99658024}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:RightLeg
       parentName: Lucas_30_11:RightUpLeg
       position: {x: -0, y: 0, z: -0.43280995}
-      rotation: {x: -0.09529248, y: 0, z: -0, w: 0.99544936}
+      rotation: {x: -0.103903584, y: 0, z: -0, w: 0.99458736}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:RightFoot
       parentName: Lucas_30_11:RightLeg
       position: {x: -0, y: 0, z: -0.41330418}
-      rotation: {x: 0.038204256, y: 0.040039945, z: 0.00079494115, w: 0.99846715}
+      rotation: {x: 0.036069684, y: -0.013312123, z: -0.004538342, w: 0.99925035}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:RightToeBase
       parentName: Lucas_30_11:RightFoot
       position: {x: -0, y: 0.15862028, z: 0}
-      rotation: {x: 0.076028205, y: -0, z: -0, w: 0.99710566}
+      rotation: {x: 0.09710325, y: -0, z: -0, w: 0.9952743}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:RightToeBaseEnd
       parentName: Lucas_30_11:RightToeBase
@@ -402,22 +431,22 @@ ModelImporter:
     - name: Lucas_30_11:LeftUpLeg
       parentName: Lucas_30_11:Hips
       position: {x: 0.08275953, y: 0, z: 0}
-      rotation: {x: -0.04189846, y: -0.024302347, z: -0.052419834, w: 0.9974498}
+      rotation: {x: -0.020752601, y: -0.0217458, z: -0.06923981, w: 0.9971471}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:LeftLeg
       parentName: Lucas_30_11:LeftUpLeg
       position: {x: -0, y: 0, z: -0.43280995}
-      rotation: {x: -0.06126704, y: 0, z: -0, w: 0.99812144}
+      rotation: {x: -0.06954406, y: 0, z: -0, w: 0.9975789}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:LeftFoot
       parentName: Lucas_30_11:LeftLeg
       position: {x: -0, y: 0, z: -0.41330418}
-      rotation: {x: 0.05546278, y: 0.04985233, z: -0.12588336, w: 0.98923814}
+      rotation: {x: 0.043922145, y: 0.048677575, z: -0.09829264, w: 0.99299544}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:LeftToeBase
       parentName: Lucas_30_11:LeftFoot
       position: {x: -0, y: 0.15862028, z: 0}
-      rotation: {x: 0.00034675875, y: -0, z: -0, w: 0.99999994}
+      rotation: {x: 0.012146937, y: -0, z: -0, w: 0.99992627}
       scale: {x: 1, y: 1, z: 1}
     - name: Lucas_30_11:LeftToeBaseEnd
       parentName: Lucas_30_11:LeftToeBase
