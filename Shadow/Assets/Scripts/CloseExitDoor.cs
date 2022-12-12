@@ -9,12 +9,14 @@ public class CloseExitDoor : MonoBehaviour {
     [SerializeField] GameObject closedDoor;
     [SerializeField] GameObject openedDoor;
     [SerializeField] UnityEvent onDoorClose;
-    
-    
+
+    [SerializeField] AudioSource doorClose;
+    [SerializeField] AudioClip doorCloseClip;
 
     void OnCollisionEnter( Collision collider ) {
         if ( !doorClosed && collider.gameObject.tag == "Player") {
             closeDoor();
+            doorClose.Play();
         }
     }
 
@@ -25,6 +27,7 @@ public class CloseExitDoor : MonoBehaviour {
         openedDoor.SetActive(false);
         doorClosed = true;
         onDoorClose.Invoke();
+        
     }
 
     void openDoor()
