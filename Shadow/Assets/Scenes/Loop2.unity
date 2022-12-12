@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1433.2305, g: 1684.8535, b: 2191.0625, a: 1}
+  m_IndirectSpecularColor: {r: 1280.7513, g: 1552.169, b: 2085.767, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10941,6 +10941,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6993526407113929415, guid: e0d6631927057dc48a345f3708af244c, type: 3}
+      propertyPath: m_Volume
+      value: 0.035
+      objectReference: {fileID: 0}
     - target: {fileID: 7299983865476481443, guid: e0d6631927057dc48a345f3708af244c, type: 3}
       propertyPath: m_Name
       value: '[Canvas] MessageUI'
@@ -15847,6 +15851,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 671215123621864251, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: m_Volume
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 671215123621864251, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 671215123621864251, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 33b786534841a6f498d1dee8949e4c2e, type: 3}
     - target: {fileID: 1515225796724499169, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
       propertyPath: horizontalVelocity
       value: 4.1
@@ -16043,14 +16059,26 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3125362168425003573, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: footstepFrequency
+      value: 0.65
+      objectReference: {fileID: 0}
     - target: {fileID: 3158267709658677662, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677903594577701575, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: m_Volume
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 4020330735672176239, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 6532838231627111407, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
+      propertyPath: loop1
+      value: 
+      objectReference: {fileID: 8300000, guid: 33b786534841a6f498d1dee8949e4c2e, type: 3}
     - target: {fileID: 8388751205107393343, guid: 9ca3dd89bdc736a4583877d5f49ea8ce, type: 3}
       propertyPath: m_RootOrder
       value: 11

@@ -16,8 +16,8 @@ public class GameEventListenerArray : MonoBehaviour, EventListener
     [Tooltip("Response to invoke when Event is raised.")]
     [SerializeField] UnityEvent Response;
 
-    
-
+    public AudioSource soundSource;
+    public AudioClip messageClip;
 
     private void OnEnable()
     {
@@ -40,6 +40,8 @@ public class GameEventListenerArray : MonoBehaviour, EventListener
         if(gameObject.activeInHierarchy)
         {
             StartCoroutine("RaiseResponse");
+            soundSource.pitch = Random.Range(0.98f, 1.02f);
+            soundSource.Play();
         }
         
     }
