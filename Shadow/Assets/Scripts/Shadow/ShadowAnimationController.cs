@@ -19,6 +19,10 @@ public class ShadowAnimationController : MonoBehaviour
 
     int velocityHash;
     int crounchHash;
+    int dieHash;
+    int attackHash;
+    int flipHash;
+    int restartHash;
 
     float crounchStartTime = 0;
     bool crounching = false;
@@ -31,8 +35,13 @@ public class ShadowAnimationController : MonoBehaviour
 
         velocityHash = Animator.StringToHash("Velocity");
         crounchHash = Animator.StringToHash("Crounching");
+        dieHash = Animator.StringToHash("Die");
+        attackHash = Animator.StringToHash("Attack");
+        flipHash = Animator.StringToHash("Flip");
+        restartHash = Animator.StringToHash("Restart");
 
         crounchCurveMaxTime = crounchCurve[crounchCurve.length-1].time;
+
     }
 
     void Update()
@@ -61,12 +70,22 @@ public class ShadowAnimationController : MonoBehaviour
 
     public void Crounch()
     {
+        if(crounching)
+        {
+            return;
+        }
+
         crounching = true;
         crounchStartTime = Time.time;
     }
 
     public void GetUp()
     {
+        if(!crounching)
+        {
+            return;
+        }
+
         crounching = false;
         crounchStartTime = Time.time;
     }
@@ -75,6 +94,27 @@ public class ShadowAnimationController : MonoBehaviour
     {
         crounching = !crounching;
         crounchStartTime = Time.time;
+    }
+
+    public void Die()
+    {
+        animator.applyRootMotion = true;
+        animator.SetTrigger(dieHash);
+    }
+
+    public void Attack()
+    {
+        animator.SetTrigger(attackHash);
+    }
+
+    public void Flip()
+    {
+        animator.SetTrigger(flipHash);
+    }
+
+    public void Restart()
+    {
+        animator.SetTrigger(restartHash);
     }
 
     void OnValidate()
