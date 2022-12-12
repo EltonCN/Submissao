@@ -308,9 +308,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 11.981
       objectReference: {fileID: 0}
+    - target: {fileID: 2087174084095990947, guid: 5065ce8462bb0e34e81f88ea6f2a8b90, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2584549558568215907, guid: 5065ce8462bb0e34e81f88ea6f2a8b90, type: 3}
       propertyPath: m_Name
-      value: Shadow
+      value: ShadowVFX
       objectReference: {fileID: 0}
     - target: {fileID: 2924519020242255833, guid: 5065ce8462bb0e34e81f88ea6f2a8b90, type: 3}
       propertyPath: m_RootOrder
