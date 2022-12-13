@@ -1,85 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &442002073
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 442002074}
-  - component: {fileID: 442002076}
-  m_Layer: 0
-  m_Name: LightProbe
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &442002074
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442002073}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.5, y: 2, z: 10.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1229652427625794191}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!220 &442002076
-LightProbeGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442002073}
-  m_Enabled: 1
-  m_SourcePositions:
-  - {x: 2.67911, y: 0.30884743, z: -0.3158474}
-  - {x: 2.67911, y: 0.30884743, z: -10}
-  - {x: 2.67911, y: -1.5, z: -0.3158474}
-  - {x: 2.67911, y: -1.5, z: -10}
-  - {x: -8, y: 0.30884743, z: -0.3158474}
-  - {x: -8, y: 0.30884743, z: -10}
-  - {x: 2.67911, y: 2.5, z: -0.3158474}
-  - {x: 2.67911, y: 2.5, z: -10}
-  - {x: -8, y: 2.5, z: -0.3158474}
-  - {x: -8, y: 2.5, z: -10}
-  - {x: -8, y: -1.5, z: -0.3158474}
-  - {x: -12.91003, y: -1.5, z: -10}
-  - {x: 2.67911, y: 0.30884743, z: 9}
-  - {x: 2.67911, y: -1.5, z: 9}
-  - {x: -8, y: 0.30884743, z: 9}
-  - {x: 2.67911, y: 2.5, z: 9}
-  - {x: -8, y: 2.5, z: 9}
-  - {x: -8, y: -1.5, z: 9}
-  - {x: 8, y: 0.30884743, z: -10}
-  - {x: 8, y: -1.5, z: -10}
-  - {x: 8, y: 2.5, z: -10}
-  - {x: 8, y: 0.30884743, z: -0.3158474}
-  - {x: 8, y: -1.5, z: -0.3158474}
-  - {x: 8, y: 2.5, z: -0.3158474}
-  - {x: -8, y: -1.5, z: -10}
-  - {x: 8, y: 0.30884743, z: 9}
-  - {x: 8, y: -1.5, z: 9}
-  - {x: 8, y: 2.5, z: 9}
-  - {x: -3.3526306, y: 0.30884743, z: -10}
-  - {x: -3.3526306, y: -1.5, z: -10}
-  - {x: -3.3526306, y: 2.5, z: -10}
-  - {x: -3.3526306, y: 0.30884743, z: -0.3158474}
-  - {x: -3.3526306, y: -1.5, z: -0.3158474}
-  - {x: -3.3526306, y: 2.5, z: -0.3158474}
-  - {x: -19.681028, y: -1.5, z: -10}
-  - {x: -3.3526306, y: 0.30884743, z: 9}
-  - {x: -3.3526306, y: -1.5, z: 9}
-  - {x: -3.3526306, y: 2.5, z: 9}
-  m_Dering: 1
 --- !u!1 &454982112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1108,6 @@ Transform:
   - {fileID: 7135966517912322333}
   - {fileID: 7135966517593392106}
   - {fileID: 4230013206498601352}
-  - {fileID: 442002074}
   - {fileID: 4753546181647796349}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -11114,7 +11033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5829741832975311562, guid: 06da1db31b6bde74c83305e9a70109be, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5829741832975311562, guid: 06da1db31b6bde74c83305e9a70109be, type: 3}
       propertyPath: m_LocalPosition.x
