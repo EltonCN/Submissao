@@ -246,7 +246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5210612083483770150
 Transform:
   m_ObjectHideFlags: 0
@@ -321,6 +321,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b5ae64b7-a9c3-4422-8b1a-cdc194ec8658
     m_ActionName: DefaultMap/Paint[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e934cd1c-629e-4359-a151-04c3adb61b25
+    m_ActionName: DefaultMap/Grab[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 58df8653-4b40-4f79-bbe2-d6a9752fc7c1
+    m_ActionName: DefaultMap/SwitchPaintingMode[/Keyboard/p]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: DefaultMap
@@ -378,7 +386,7 @@ LineRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1313427a3dd1c4f459c0c5bcb9e4839c, type: 2}
+  - {fileID: 2100000, guid: 0d7b0313537d93c44a1ea7da073bafbd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
