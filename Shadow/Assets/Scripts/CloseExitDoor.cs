@@ -15,12 +15,12 @@ public class CloseExitDoor : MonoBehaviour {
 
     void OnCollisionEnter( Collision collider ) {
         if ( !doorClosed && collider.gameObject.tag == "Player") {
-            closeDoor();
+            CloseDoor();
             doorClose.Play();
         }
     }
 
-    void closeDoor()
+    public void CloseDoor()
     {
         if(exitDoor)
         {
@@ -41,7 +41,7 @@ public class CloseExitDoor : MonoBehaviour {
         
     }
 
-    void openDoor()
+    public void OpenDoor()
     {
         if(exitDoor)
         {
@@ -65,11 +65,11 @@ public class CloseExitDoor : MonoBehaviour {
     {
         if(doorClosed)
         {
-            closeDoor();
+            CloseDoor();
         }
         else
         {
-            openDoor();
+            OpenDoor();
         }
     }
 }
