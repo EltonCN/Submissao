@@ -15,7 +15,12 @@ public class RaiseOnCollision : MonoBehaviour
         if(other.gameObject.tag == tag || other.attachedRigidbody.gameObject.tag == tag)
         {
             onCollision.Invoke();
-            gameEvent.Raise();
+
+            if(gameEvent != null)
+            {
+                gameEvent.Raise();
+            }
+            
 
             if(destroyOnRaise)
             {
