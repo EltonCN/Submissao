@@ -12,6 +12,7 @@ public class ShadowAnimationController : MonoBehaviour
 
     [SerializeField] bool useNavMeshVelocity;
     [SerializeField] AnimationCurve crounchCurve;
+    [SerializeField] bool startCrounched;
 
 
     Animator animator;
@@ -121,5 +122,10 @@ public class ShadowAnimationController : MonoBehaviour
     {
         crounchCurve.preWrapMode = WrapMode.Clamp;
         crounchCurve.postWrapMode = WrapMode.Clamp;
+
+        if(startCrounched)
+        {
+            Crounch();
+        }
     }
 }

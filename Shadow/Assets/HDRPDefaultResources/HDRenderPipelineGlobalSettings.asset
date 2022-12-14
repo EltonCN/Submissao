@@ -63,6 +63,7 @@ MonoBehaviour:
   m_RenderPipelineRayTracingResources: {fileID: 0}
   beforeTransparentCustomPostProcesses: []
   beforePostProcessCustomPostProcesses: []
+  afterPostProcessBlursCustomPostProcesses: []
   afterPostProcessCustomPostProcesses: []
   beforeTAACustomPostProcesses: []
   lightLayerName0: Light LayerDefault
@@ -88,10 +89,71 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 26bdddf49760c61438938733f07fa2a2, type: 2}
   - {fileID: 11400000, guid: 5a9a2dc462c7bde4f86d0615a19c2c72, type: 2}
   - {fileID: 11400000, guid: 2b7005ba3a4d8474b8cdc34141ad766e, type: 2}
+  rendererListCulling: 0
   DLSSProjectId: 000000
   useDLSSCustomProjectId: 0
-  supportProbeVolumes: 0
-  apvScenesBounds:
-    serializedBounds: []
-    serializedHasVolumes: []
+  supportProbeVolumes: 1
+  supportRuntimeDebugDisplay: 0
+  apvScenesData:
+    serializedBounds:
+    - sceneGUID: 20df41c602352c3418c620e2d0026760
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 81, y: 81, z: 81}
+    - sceneGUID: 8f3ccedf4e2f20949ac167cc85c3c75a
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 81, y: 81, z: 81}
+    serializedHasVolumes:
+    - sceneGUID: 20df41c602352c3418c620e2d0026760
+      hasProbeVolumes: 1
+    - sceneGUID: 8f3ccedf4e2f20949ac167cc85c3c75a
+      hasProbeVolumes: 1
+    serializedProfiles:
+    - sceneGUID: 20df41c602352c3418c620e2d0026760
+      profile: {fileID: 11400000, guid: 880c5a995ba5543408f9f59ce39a5945, type: 2}
+    - sceneGUID: 8f3ccedf4e2f20949ac167cc85c3c75a
+      profile: {fileID: 11400000, guid: 880c5a995ba5543408f9f59ce39a5945, type: 2}
+    serializedBakeSettings:
+    - sceneGUID: 20df41c602352c3418c620e2d0026760
+      settings:
+        dilationSettings:
+          enableDilation: 1
+          dilationDistance: 1
+          dilationValidityThreshold: 0.25
+          dilationIterations: 1
+          squaredDistWeighting: 1
+        virtualOffsetSettings:
+          useVirtualOffset: 1
+          outOfGeoOffset: 0.01
+          searchMultiplier: 0.2
+    - sceneGUID: 8f3ccedf4e2f20949ac167cc85c3c75a
+      settings:
+        dilationSettings:
+          enableDilation: 1
+          dilationDistance: 1
+          dilationValidityThreshold: 0.25
+          dilationIterations: 1
+          squaredDistWeighting: 1
+        virtualOffsetSettings:
+          useVirtualOffset: 1
+          outOfGeoOffset: 0.01
+          searchMultiplier: 0.2
+    serializedBakingSets:
+    - name: Default
+      sceneGUIDs:
+      - 20df41c602352c3418c620e2d0026760
+      - 8f3ccedf4e2f20949ac167cc85c3c75a
+      settings:
+        dilationSettings:
+          enableDilation: 1
+          dilationDistance: 1
+          dilationValidityThreshold: 0.25
+          dilationIterations: 1
+          squaredDistWeighting: 1
+        virtualOffsetSettings:
+          useVirtualOffset: 1
+          outOfGeoOffset: 0.01
+          searchMultiplier: 0.2
+      profile: {fileID: 11400000, guid: 880c5a995ba5543408f9f59ce39a5945, type: 2}
   m_Version: 3
