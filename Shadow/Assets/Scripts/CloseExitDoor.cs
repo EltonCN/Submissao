@@ -22,9 +22,20 @@ public class CloseExitDoor : MonoBehaviour {
 
     void closeDoor()
     {
-        exitDoor.GetComponent<MeshCollider>().enabled = true;
-        closedDoor.SetActive(true);
-        openedDoor.SetActive(false);
+        if(exitDoor)
+        {
+            exitDoor.GetComponent<MeshCollider>().enabled = true;
+        }
+        
+        if(closedDoor)
+        {
+            closedDoor.SetActive(true);
+        }
+        if(openedDoor)
+        {
+            openedDoor.SetActive(false);
+        }
+        
         doorClosed = true;
         onDoorClose.Invoke();
         
@@ -32,9 +43,21 @@ public class CloseExitDoor : MonoBehaviour {
 
     void openDoor()
     {
-        exitDoor.GetComponent<MeshCollider>().enabled = false;
-        closedDoor.SetActive(false);
-        openedDoor.SetActive(true);
+        if(exitDoor)
+        {
+            exitDoor.GetComponent<MeshCollider>().enabled = false;
+
+        }
+        
+        if(closedDoor)
+        {
+            closedDoor.SetActive(false);
+        }
+        if(openedDoor)
+        {
+            openedDoor.SetActive(true);
+        }
+
         doorClosed = false;
     }
 
