@@ -16,7 +16,7 @@ public class Locker_Sound : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        delay = Random.Range(5f, 10f);
+        delay = Random.Range(15f, 80f);
         lockerSource.PlayDelayed(delay);
 
         StartCoroutine(LockerSound());        
@@ -27,7 +27,7 @@ public class Locker_Sound : MonoBehaviour
         PlayLockerSound();
 
         
-        lockerTimer = Random.Range(15f, 60f);
+        lockerTimer = Random.Range(15f, 80f);
         lockerTotal = lockerSource.clip.length + lockerTimer;
 
         yield return new WaitForSeconds(lockerSource.clip.length + lockerTimer);
