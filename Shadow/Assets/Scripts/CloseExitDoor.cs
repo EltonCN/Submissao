@@ -15,26 +15,49 @@ public class CloseExitDoor : MonoBehaviour {
 
     void OnCollisionEnter( Collision collider ) {
         if ( !doorClosed && collider.gameObject.tag == "Player") {
-            closeDoor();
+            CloseDoor();
             doorClose.Play();
         }
     }
 
-    void closeDoor()
+    public void CloseDoor()
     {
-        exitDoor.GetComponent<MeshCollider>().enabled = true;
-        closedDoor.SetActive(true);
-        openedDoor.SetActive(false);
+        if(exitDoor)
+        {
+            exitDoor.GetComponent<MeshCollider>().enabled = true;
+        }
+        
+        if(closedDoor)
+        {
+            closedDoor.SetActive(true);
+        }
+        if(openedDoor)
+        {
+            openedDoor.SetActive(false);
+        }
+        
         doorClosed = true;
         onDoorClose.Invoke();
         
     }
 
-    void openDoor()
+    public void OpenDoor()
     {
-        exitDoor.GetComponent<MeshCollider>().enabled = false;
-        closedDoor.SetActive(false);
-        openedDoor.SetActive(true);
+        if(exitDoor)
+        {
+            exitDoor.GetComponent<MeshCollider>().enabled = false;
+
+        }
+        
+        if(closedDoor)
+        {
+            closedDoor.SetActive(false);
+        }
+        if(openedDoor)
+        {
+            openedDoor.SetActive(true);
+        }
+
         doorClosed = false;
     }
 
@@ -42,11 +65,11 @@ public class CloseExitDoor : MonoBehaviour {
     {
         if(doorClosed)
         {
-            closeDoor();
+            CloseDoor();
         }
         else
         {
-            openDoor();
+            OpenDoor();
         }
     }
 }
