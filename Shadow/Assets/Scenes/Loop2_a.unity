@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.72708726, g: 0.8789797, b: 1.1158595, a: 1}
+  m_IndirectSpecularColor: {r: 96.184875, g: 133.53549, b: 216.49475, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14244,7 +14244,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33190
+  m_Name: pb_Mesh33200
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17884,18 +17884,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7299983865476481445, guid: e0d6631927057dc48a345f3708af244c, type: 3}
-      propertyPath: events.Array.size
-      value: 2
+    - target: {fileID: 7299983865476481446, guid: e0d6631927057dc48a345f3708af244c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7299983865476481445, guid: e0d6631927057dc48a345f3708af244c, type: 3}
-      propertyPath: events.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: acf28a399bf59e14d9f5758495b1fc8e, type: 2}
-    - target: {fileID: 7299983865476481445, guid: e0d6631927057dc48a345f3708af244c, type: 3}
-      propertyPath: events.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: f8dd23a29c4d8fe43a1ddbdf3d88bc7f, type: 2}
     - target: {fileID: 7299983865476481447, guid: e0d6631927057dc48a345f3708af244c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -21458,7 +21450,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33492
+  m_Name: pb_Mesh33510
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

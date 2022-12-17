@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7299983865476481446}
   - component: {fileID: 7299983865476481445}
   - component: {fileID: 6993526407113929415}
+  - component: {fileID: 5701904737626063047}
   m_Layer: 5
   m_Name: '[Canvas] MessageUI'
   m_TagString: Untagged
@@ -182,8 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events:
-  - {fileID: 11400000, guid: 14889b301297b164caee068e617c8c5d, type: 2}
-  - {fileID: 11400000, guid: 96583560338884c4d9786e608755d630, type: 2}
+  - {fileID: 11400000, guid: acf28a399bf59e14d9f5758495b1fc8e, type: 2}
+  - {fileID: 11400000, guid: f8dd23a29c4d8fe43a1ddbdf3d88bc7f, type: 2}
   delay: 0
   Response:
     m_PersistentCalls:
@@ -212,8 +213,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  soundSource: {fileID: 6993526407113929415}
-  messageClip: {fileID: 8300000, guid: 9555c9e81de6a414b8982c5e2375163b, type: 3}
+      - m_Target: {fileID: 5701904737626063047}
+        m_TargetAssemblyTypeName: RandomPitch, Assembly-CSharp
+        m_MethodName: Randomize
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6993526407113929415}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &6993526407113929415
 AudioSource:
   m_ObjectHideFlags: 0
@@ -310,6 +333,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5701904737626063047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7299983865476481443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 930181fd4071e7340a7571b7b9529eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 6993526407113929415}
+  rangeMin: 0.98
+  rangeMax: 1.02
 --- !u!1 &7299983865520355378
 GameObject:
   m_ObjectHideFlags: 0
