@@ -35,6 +35,12 @@ Become an exorcist graffiti student trapped in a college from another dimension 
 
 
 ### Sounds
+Musics
+- [Loop 1 music](https://drive.google.com/file/d/1T98K4oUJ79WPpAD90mCGcXs0fKmQIGxU/view?usp=share_link)
+- [Loop 2 music](https://drive.google.com/file/d/1LNMfq2jMH7fGH7I4WfBEo4Sv8ApSeQ69/view?usp=share_link)
+- [Loop 3 music](https://drive.google.com/file/d/1kFQIiQegUDBmhHHGSYEfTruEWq0pH7L5/view?usp=share_link)
+- [Loop 4 music](https://drive.google.com/file/d/10VsQ1AFhiVxydY4A7HZ_xb58IMc_GM7_/view?usp=share_link)
+- [Loop 5 music](https://drive.google.com/file/d/1jd3i61FbEIDEXhvDnJicDTl7keTO5idf/view?usp=share_link)
 
 ## Tools Used
 
