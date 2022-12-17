@@ -2,7 +2,7 @@
 
 Become an exorcist graffiti student trapped in a college from another dimension as you investigate your advisor's whereabouts and try to stay safe from a strange shadow.
 
-[![](https://img.shields.io/badge/-Try%20it%20now!-red?style=for-the-badge)]()
+[![](https://img.shields.io/badge/-Try%20it%20now!-red?style=for-the-badge)](https://github.com/EltonCN/JogosTeP/releases/tag/0.1.1)
 
 ![](Media/image_Shadow_Loop2_a_2022-12-16_003_0000.png)
 
