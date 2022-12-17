@@ -29,6 +29,14 @@ public class ShadowAnimationController : MonoBehaviour
     bool crounching = false;
     float crounchCurveMaxTime;
 
+    void Awake()
+    {
+        if(startCrounched)
+        {
+            Crounch();
+        }
+    }
+
     void Start()
     {
         animator = GetComponent<Animator>();
