@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-
 [AddComponentMenu("Shadow/Game Event Listener Array")]
 public class GameEventListenerArray : MonoBehaviour, EventListener
 {
