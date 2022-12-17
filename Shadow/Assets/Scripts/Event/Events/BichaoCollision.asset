@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba5ba78b0bf6ca8429b9d925435832ba, type: 3}
   m_Name: BichaoCollision
   m_EditorClassIdentifier: 
+  debugMode: 0

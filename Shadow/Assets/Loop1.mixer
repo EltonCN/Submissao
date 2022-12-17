@@ -47,6 +47,25 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &-5466203089524086202
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shadow
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 745df463e8b4e8244b67707d5e94fc79
+  m_Children: []
+  m_Volume: e56b26a1fd9c05947b370bc8f2d9a4eb
+  m_Pitch: 0e8369bdb668c554bbe48ccc8e35b0f5
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -2191518573657475544}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &-5414261718178142763
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -76,6 +95,20 @@ AudioMixerEffectController:
   m_EffectID: ce8b9224a5d539348a82ce962cea0c29
   m_EffectName: Attenuation
   m_MixLevel: 3bd38ff6d3426a94aa76f0cb737308e2
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &-2191518573657475544
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 6de01abb799fd184888d4571b5caa5b6
+  m_EffectName: Attenuation
+  m_MixLevel: 427f98415c8248d4593dc47925083ac0
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
@@ -124,6 +157,7 @@ AudioMixerController:
     - 4539b4aefee419e4790048d77cd435ac
     - c83dc8fcb9aa73247ab12d243c05365f
     - bdcabd2309919f748865f0219f87bcf8
+    - 745df463e8b4e8244b67707d5e94fc79
     name: View
   - guids:
     - 1261e2e328ee5114bb38e44d8c3b0ed6
@@ -183,7 +217,8 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: cc60c223adfd1b6448bd5a5963d3c8e5
-  m_FloatValues: {}
+  m_FloatValues:
+    e56b26a1fd9c05947b370bc8f2d9a4eb: 20
   m_TransitionOverrides: {}
 --- !u!244 &4461640390216650836
 AudioMixerEffectController:
@@ -246,6 +281,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 8389489493180027167}
   - {fileID: -1868888466094214632}
+  - {fileID: -5466203089524086202}
   m_Volume: 8eb6aeb98bfce9a41acf85095be01192
   m_Pitch: 6d2625d1e8f81804bacc185a756ab5d5
   m_Send: 00000000000000000000000000000000
