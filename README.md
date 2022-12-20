@@ -4,7 +4,7 @@ Become an exorcist graffiti student trapped in a college from another dimension 
 
 [![](https://img.shields.io/badge/-Try%20it%20now!-red?style=for-the-badge)](https://github.com/EltonCN/JogosTeP/releases/tag/0.1.1)
 
-![](Media/image_Shadow_Loop2_a_2022-12-16_003_0000.png)
+[![](Media/image_Shadow_Loop2_a_2022-12-16_003_0000.png)](https://drive.google.com/file/d/19tNfZ6DuG2Hfh5Cl6yJem_EcDp4TyiN2/view?usp=share_link)
 
 3D Suspense game prototype made by undergraduate and graduate students for the discipline "Jogos Digitais - Teoria e Prática" (FEEC-IA/Unicamp, 2s2022, Prof. Alfredo Suppia and Prof. José Mario De Martino). 
 
